@@ -1,4 +1,4 @@
-# A Nodal Application
+# nodelick-api
 
 ## Running Locally
 
