@@ -1,5 +1,37 @@
 {
 
-  "migration_id": null
+  "migration_id": 2016011207441066,
+
+  "models": {
+
+    "Tweet": {
+
+      "table": "tweets",
+
+      "columns": [
+        {"name": "id", "type": "serial", "properties": {"nullable":false,"primary_key":true,"auto_increment":true}},
+        {"name": "user_id", "type": ""},
+        {"name": "int", "type": "undefined"},
+        {"name": "body", "type": "string"},
+        {"name": "created_at", "type": "datetime"}
+      ]
+
+    },
+
+    "User": {
+
+      "table": "users",
+
+      "columns": [
+        {"name": "id", "type": "serial", "properties": {"nullable":false,"primary_key":true,"auto_increment":true}},
+        {"name": "email", "type": "string", "properties": {"unique":true}},
+        {"name": "password", "type": "string"},
+        {"name": "username", "type": "string"},
+        {"name": "created_at", "type": "datetime"}
+      ]
+
+    }
+
+  }
 
 }
