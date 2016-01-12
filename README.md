@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/bretth18/nodelick-api.svg?branch=master)](https://travis-ci.org/bretth18/nodelick-api)
 # nodelick-api
 
 ## Running Locally
