@@ -1,8 +1,24 @@
 {
 
-  "migration_id": 2016011207441066,
+  "migration_id": 2016011208224962,
 
   "models": {
+
+    "AccessToken": {
+
+      "table": "access_tokens",
+
+      "columns": [
+        {"name": "id", "type": "serial", "properties": {"nullable":false,"primary_key":true,"auto_increment":true}},
+        {"name": "user_id", "type": "int"},
+        {"name": "access_token", "type": "string"},
+        {"name": "token_type", "type": "string"},
+        {"name": "expires_at", "type": "datetime"},
+        {"name": "ip_address", "type": "string"},
+        {"name": "created_at", "type": "datetime"}
+      ]
+
+    },
 
     "Tweet": {
 
