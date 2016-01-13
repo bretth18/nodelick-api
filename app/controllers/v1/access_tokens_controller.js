@@ -7,60 +7,23 @@ module.exports = (function() {
 
   class V1AccessTokensController extends Nodal.Controller {
 
-    index() {
-
-      AccessToken.query()
-        .where(this.params.query)
-        .end((err, models) => {
-
-          this.respond(err || models);
-
-        });
-
-    }
-
-    show() {
-
-      AccessToken.find(this.params.id, (err, model) => {
-
-        this.respond(err || model);
-
-      });
-
-    }
-
     create() {
 
-      AccessToken.create(this.params.body.data, (err, model) => {
+      AccessToken.login(this.params, (err, accessToken) => {
 
-        this.respond(err || model);
-
+        this.respond(err || accessToken);
       });
-
     }
 
-    update() {
+    destroy(){
 
-      AccessToken.update(this.params.id, this.params.body.data, (err, model) => {
+      AccessToken.logout(this.params, (err, accessToken) => {
 
-        this.respond(err || model);
-
+        this.respond(err || accessToken);
       });
-
     }
-
-    destroy() {
-
-      AccessToken.destroy(this.params.id, (err, model) => {
-
-        this.respond(err || model);
-
-      });
-
-    }
-
   }
-
   return V1AccessTokensController;
+
 
 })();
